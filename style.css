@@ -5,20 +5,23 @@
     font-family: "Roboto";
 }
 :root {
+    /* 2nd Colors */
+    --transparent-bg:#d9eae60e;
+    --button-color: #27E0B3;
     /* Background Colors */
     --background-color: #000000;
     
     /* Text Colors */
     --primary-text-color: #e0e0e0;
-    --highlight-text-color: #00ff88;
+    --highlight-text-color: #27E0B3;
     
     /* Box and Border Colors */
     --box-background-color: #1a1a1a;
     --bottom-border-color: #00cc66;
     
     /* Main Button Colors */
-    --main-button-color: #00ff88;
-    --main-button-hover-color: #00cc66;
+    --main-button-color: #27E0B3;
+    --main-button-hover-color: #27E0B3
     
     /* Secondary Button Colors */
     --secondary-button-color: #333333;
@@ -38,7 +41,7 @@ body{
     width: 100%;
     height: 100%;
 }
-nav{
+/* nav{
     position: relative;
     width: 100%;
     z-index: 1;
@@ -143,7 +146,7 @@ nav{
     font-size: 1.5vw;
     font-weight: 500;
     transition: all ease 0.66s;
-    /* box-shadow: 0px 0px 10vw var(--main-button-hover-color); */
+    box-shadow: 0px 0px 10vw var(--main-button-hover-color);
     cursor: pointer;
     margin-top: 1.5vw;
     scale: 1.2;
@@ -184,9 +187,211 @@ nav{
     bottom: 0%;
     left: 0%;
    
+} */
+.home-to{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    
+}
+.home-bg-blur1{
+    position: absolute;
+    left: 70%;
+    top: 65%;
+    /* transform: translate(-50%, -50%); */
+    filter: blur(70px);
+    height: 15vh;
+    width: 15vh;
+    background-color: var(--button-color);
+    border-radius: 50%;
+    opacity: 0.7;
+}
+.home-bg-blur2 {
+    opacity: 0.7;
+    position: absolute;
+    left: 70%;
+    top: 0%;
+    transform: translate(-50%, -50%);
+    filter: blur(50px);
+    height: 15vh;
+    width: 15vh;
+    background-color: var(--button-color);
+    border-radius: 50%;
+}
+.home-bg-blur3{
+    opacity: 0.9;
+    position: absolute;
+    left: 30%;
+    top: -10%;
+    transform: translate(-50%, -50%);
+    filter: blur(70px);
+    height: 40vh;
+    width: 10vh;
+    transform: rotate(45deg);
+    background-color: var(--button-color);
+    border-radius: 50%;
+
+}
+.home-front{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #d9eae60e;
+    backdrop-filter: blur(100px);
+    
+}
+.nav2{
+    height: 5vh;
+    width: 100%;
+    margin-top: 0.5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.nav2-left h4{
+    font-size: 2.3vw;
+    margin-left: 3vw;
+    font-weight: 500;
+    color: var(--primary-text-color);
+}
+.nav2-right{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    color: var(--primary-text-color);
+}
+
+.nav2-right a{
+    margin-right: 3vw;
+    color: var(--primary-text-color);
+    text-decoration: none;
+    transition: all ease 0.66s;
+    border-radius: 50%;
+    padding: 0.5vw;
+}
+.nav2-right a abbr{
+    text-decoration: none;
+}
+
+.nav2-right i{
+    font-size: 1.4vw;
+    font-weight: 10;
+}
+
+.nav2-right a:hover{
+    background-color: var(--highlight-text-color);
+    color: var(--background-color);
+    box-shadow: 0px 0px 2vw var(--highlight-text-color);
+}
+.home-to .home-text{
+    height: calc(100% - 5.5vh);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.home-to .home-text .home-text-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6%;
+    height: 50%;
+    width: 100%;
+    /* background-color: #fff; */
+}
+.home-to .home-text h3{
+    color: var(--highlight-text-color);
+    font-size: 2.4vw;
+    font-weight: 500;
+    text-transform: uppercase;
+    /* margin-bottom: 2vw; */
+}
+
+.home-to .home-text h1{
+    color: var(--primary-text-color);
+    line-height:8vh;
+    font-size:5.6vw;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.home-to .home-text h1:nth-child(2){
+    letter-spacing: 0.3vw;
+    /* background-color: #fff; */
+}
+.home-to .home-text h1:nth-child(3){
+    letter-spacing: -0.1vw;
+    margin-bottom: 1vh;
+}
+.home-to .home-text button{
+    position: relative;
+    background-color: var(--button-color);
+    color: var(--background-color);
+    border: none;
+    padding: 0.5vw 3.3vw;
+    border-radius: 7px;
+    font-size: 1.3vw;
+    font-weight: 400;
+    transition: all ease 0.66s;
+    /* box-shadow: 0px 0px 10vw var(--main-button-hover-color); */
+    cursor: pointer;
+    margin-top: 1.5vw;
+    scale: 1.2;
+    backdrop-filter: blur(20px);
+    transition: all ease  0.6s;
+}
+.home-to .home-text button:hover{
+    /* background-color: var(--highlight-text-color); */
+    /* color: var(--background-color); */
+    box-shadow: 0px 0px 1vw var(--button-color);
+}
+.home-text .home-text-bottom{
+    /* background-color: red; */
+    width: 100%;
+    height: 22%;
+    bottom: 0%;
+
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding:0vh 15vw ;
+}
+.home-text .home-text-bottom  .text-bottom-box{
+    height: 70%;
+    width: 20%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scale: 0.9;
+
+}
+.home-text .home-text-bottom  .text-bottom-box h1{
+    color: var(--primary-text-color);
+    font-size: 2vw;
+    font-weight: 550;
+    /* margin-bottom: 0.5vh; */
+}
+.home-text .home-text-bottom  .text-bottom-box h2{
+    /* color: var(--highlight-text-color); */
+    font-size: 1.7vw;
+    font-weight: 450;
+    letter-spacing: 0.1vw;
+    /* margin-bottom: 1vh; */
+}
+.page2-bg{
+    width: 100%;
+    height: 100%;
+    position: relative;
+
 }
 .page2{
-
+    position: absolute;
+    background-color:var(--transparent-bg) ;
+    backdrop-filter: blur(100px);
     width: 100%;
     height: 100%;
     display: flex;
@@ -314,7 +519,45 @@ nav{
     text-transform: uppercase;
     opacity: 0.8;
 }
+.page3-bg{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+}
+.page3-bg .bg-blur{
+    height: 25vh;
+    width: 25vh;
+    border-radius:50% ;
+    position: absolute;
+    top: 70%;
+    left: -0%;
+    z-index: -2;
+    opacity: 0.3;
+
+    transform: translate(-50%, -50%);
+    background-color: var(--button-color);
+    filter: blur(100px);
+}
+.page3-bg .bg-blur2{
+    height: 25vh;
+    width: 25vh;
+    border-radius:50% ;
+    position: absolute;
+    top: 100%;
+    left: 30%;
+    z-index: -2;
+    opacity: 0.3;
+
+    transform: translate(-50%, -50%);
+    background-color: var(--button-color);
+    filter: blur(100px);
+}
 .page3{
+    position: absolute;
+    background-color: var(--transparent-bg);
+    backdrop-filter: blur(100px);
     width: 100%;
     height: 100%;
     display: flex;
@@ -363,12 +606,13 @@ nav{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: wrap;
+    padding: 0vh 1.5vw;
 
 }
 .page3-bottom-box{
-    height: 70%;
+    height: 100%;
     width: 33%;
     border-radius: 7px;
     border: 1px solid var(--secondary-button-hover-color);
@@ -387,37 +631,51 @@ nav{
     border-radius: 7px 7px 0px 0px;
     object-fit: cover;
     object-position: center;
+    transition: all ease .66s;
 }
 .text{
     padding: 1vh 1vw;
     color: var(--primary-text-color);
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     justify-content: space-between;
     flex-direction: column;
-
+    overflow: hidden;
 }
 .text h6{
+    scale: 1.4;
     opacity: 0.7;
     padding-inline: 0.2vh 0.5vw;
     border-radius: 4px;
-    background-color: var(--secondary-button-color);
+    background-color: var(--background-color);
     font-weight: 300;
+    margin-top: 1.5vh;
+    transform: translateX(10%);
+
     
 }
 .text h4{
+    scale: 1.4;
     font-size: 1.5vw;
     font-weight: 500;
+    margin-top: 1.5vh;
+    transform: translateX(13%);
+
 }
 .text button{
-    margin-top: 0.5vh;
+    scale: 1.3;
+    margin-top: 1.5vh;
     border-radius: 4px;
-    background-color: var(--primary-button-color);
-    color: var(--highlight-text-color);
+    background-color: #24CFA6;
+    color: var(--background-color);
     padding: 0.5vh 1.5vw;
     border: 1px solid var(--main-button-color);
-    font-size: 0.9vw;
-    font-weight: 250;
+    font-size: 1vw;
+    font-weight: 450;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
+    transform: translateX(10%);
+}
+.page3-bottom-box:hover .img img{
+    scale: 1.3;
 }
