@@ -10,7 +10,7 @@
     --button-color: #27E0B3;
     /* Background Colors */
     --background-color: #000000;
-    
+    --transparent:#a2fee728;
     /* Text Colors */
     --primary-text-color: #e0e0e0;
     --highlight-text-color: #27E0B3;
@@ -26,6 +26,7 @@
     /* Secondary Button Colors */
     --secondary-button-color: #333333;
     --secondary-button-hover-color: #4d4d4d;
+   
 }
 
 
@@ -40,7 +41,9 @@ body{
 #main{  
     width: 100%;
     height: 100%;
+    
 }
+
 /* nav{
     position: relative;
     width: 100%;
@@ -520,7 +523,7 @@ body{
     opacity: 0.8;
 }
 .page3-bg{
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 100%;
     height: 100%;
     position: relative;
@@ -546,10 +549,10 @@ body{
     border-radius:50% ;
     position: absolute;
     top: 100%;
-    left: 30%;
+    left: 20%;
     z-index: -2;
     opacity: 0.3;
-
+    scale: 1.5;
     transform: translate(-50%, -50%);
     background-color: var(--button-color);
     filter: blur(100px);
@@ -678,4 +681,57 @@ body{
 }
 .page3-bottom-box:hover .img img{
     scale: 1.3;
+}
+.page4{
+    background-color: var(--transparent-bg);
+    backdrop-filter: blur(100px);
+    width: 100%;
+    height: 100%;
+    position:relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.page4 img{
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+    object-position: center;
+
+    
+}
+
+
+.page4 h1{
+    
+    width: 90%;
+    background-color: var(--transparent);
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    font-size: 5vw;
+    padding: 1vh 2vw;
+    
+}
+.page4 h2{
+    margin-top: 1.3vh;
+    font-size: 3.5vw;
+
+}
+.news-page{
+    width: 100%;
+    height: 60%;
+    background-color: var(--transparent-bg);
+    backdrop-filter: blur(100px);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
