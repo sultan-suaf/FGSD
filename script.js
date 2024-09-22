@@ -1,3 +1,4 @@
+// Designed and Developed by Muhammad Sultan Ul arifeen 
 function devlopedBy() {
   var alertDiv = document.createElement('div');
   alertDiv.className = 'custom-alert'; 
@@ -55,7 +56,7 @@ function devlopedBy() {
     document.body.removeChild(alertDiv); 
   });
 }
-
+// mouse follower function 
 function mouseFollower() {
   // Add the cursor div inside the #main element
   var cursor = document.createElement('div');
@@ -114,6 +115,93 @@ function mouseFollower() {
     }
   });
 }
+function backToTop() {
+    var top = document.querySelector(".back-to-top");
+    top.addEventListener("click", function() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+}
+// gallary images function 
+function gallaryImages() {
 
+ var image = [
+  {
+    url:  'Pic/gallery 1.png'   ,
+    created:   'Created On: May 25, 2023'  ,
+    name: 'Youm - e - Takreem Shuhada Day'   ,
+  },
+  {
+    url:  'Pic/gallery 2.png'   ,
+    created:   'Created On: May 19, 2023'  ,
+    name: 'Tree Plantation Day'   ,
+  },
+  {
+    url:  'Pic/gallery 4.png'   ,
+    created:   'Created On: May 19, 2023'  ,
+    name: 'Pakistan Resolution Day'   ,
+  },
+
+ ];
+ var page3Bottom = document.querySelector(".page3-bottom");
+ var imageHTML = '';
+ image.forEach(function(item) {
+  imageHTML += `
+  <div class="page3-bottom-box">
+                        <div class="img">
+                            <img src="${item.url}" alt="">
+                        </div>
+                        <div class="text">
+                            <h6>${item.created}</h6>
+                            <h4>${item.name}</h4>
+                            <button>View Gallery</button>
+                        </div>
+                    </div>
+  `;
+ });
+ page3Bottom.innerHTML = imageHTML;
+
+
+
+};
+
+// news-box function 
+function newsBox() {
+  var news = [
+    {
+      title: 'BS Physics (Co-Education) - Apply for Pre-Admission Registration',
+      content: 'We are pleased to announce the opening of pre-admission registration for the Bachelor of Science (BS) Physics program. This co-education program provides a comprehensive curriculum',
+      date: '2022-01-15'
+    },
+    {
+      title: ' BS IT- Pre-Admission Registration Open ',
+      content: 'Welcome to the BS IT program at FG Science Degree College, affiliated with the prestigious University of Punjab. We are delighted to offer you an exceptional educational experience that',
+      date: '2022-01-15'
+    },
+    
+    {
+      title: ' HSSC-I Pre-Admission Registration',
+      content: 'Announcing HSSC-I pre-admissions Registration at FG Science Degree College Wah Cantt! Join us for a transformative educational journey, where academic excellence meets holistic',
+      date: '2022-01-15'
+    }
+  ];
+
+  var newsBox = document.querySelector('.news-page');
+  var newsHTML = '';
+
+  news.forEach(function(item) {
+    newsHTML += `
+      <div class="news-box">
+        <h3>${item.title}</h3>
+        <p>${item.content}</p>
+        <button>Read More</button>
+      </div>
+    `;
+  });
+
+  newsBox.innerHTML = newsHTML;
+}
+backToTop();
+gallaryImages();  
+newsBox();
 devlopedBy();
 mouseFollower();
